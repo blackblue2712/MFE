@@ -27,7 +27,6 @@ jobs:
           SOURCE_DIR: 'dist'
 
   deploy-app1:
-    needs: [deploy]
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -53,7 +52,6 @@ jobs:
           SOURCE_DIR: 'app1/dist'
 
   deploy-app2:
-    needs: [deploy]
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -100,3 +98,9 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: 'ap-southeast-1'
         
+  # deploy-github-page:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #   - uses: actions/checkout@v3
+  #   - name: Build and Deploy React app to GitHub Pages
+  #     uses: omkartapale/react-deployment-gh-pages@v1.0.0
