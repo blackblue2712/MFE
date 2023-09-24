@@ -75,3 +75,16 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: 'ap-southeast-1'
           SOURCE_DIR: 'app2/dist'
+
+  update-import-map:
+    needs: [deploy, deploy-app1, deploy-app2]
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./scripts
+    steps:
+      - name: grand perminssion
+        run: chmod +x after_deploy.sh
+      - name: run script
+        run: ./after_deploy.sh
+        
