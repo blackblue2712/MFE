@@ -13,8 +13,7 @@ jobs:
       - name: Run Build 🛠
         run: npm run build
       - name: MV
-        run: mkdir -p dist/root-config/$GITHUB_SHA
-        run: mv dist/*.* dist/root-config/$GITHUB_SHA/
+        run: mkdir -p dist/root-config/$GITHUB_SHA && mv dist/*.* dist/root-config/$GITHUB_SHA/
         env:
           CI: false
       - uses: jakejarvis/s3-sync-action@master
