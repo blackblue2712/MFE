@@ -83,8 +83,12 @@ jobs:
       run:
         working-directory: ./scripts
     steps:
+      - name: logs
+        run: echo "${PWD}"
       - name: grand perminssion
-        run: chmod +x after_deploy.sh
+        run: chmod +x ./after_deploy.sh
+      - name: Install Dependencies 🔰
+        run: npm i
       - name: run script
         run: ./after_deploy.sh
         
