@@ -83,6 +83,7 @@ jobs:
       run:
         working-directory: ./importmap-updater
     steps:
+      - uses: actions/checkout@master
       - name: logs
         run: echo "${PWD}"
       - name: grand perminssion
