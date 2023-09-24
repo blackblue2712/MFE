@@ -14,9 +14,9 @@ function urlNotDownloadable(url, err) {
 const importMapFilePath = path.resolve(process.cwd(), "importmap.json");
 const importMap = JSON.parse(fs.readFileSync(importMapFilePath));
 const urls = [
-    `https://nghiadang-single-spa.s3.ap-southeast-1.amazonaws.com/root-config/${process.env.GITHUB_SHA}/nghiadang-root-config.js`,
-    `https://nghiadang-single-spa.s3.ap-southeast-1.amazonaws.com/app1/${process.env.GITHUB_SHA}/nghiadang-app1.js`,
-    `https://nghiadang-single-spa.s3.ap-southeast-1.amazonaws.com/app2/${process.env.GITHUB_SHA}/nghiadang-app2.js`,
+    `https://nghiadang-single-spa.s3.ap-southeast-1.amazonaws.com/root-config/nghiadang-root-config.js`,
+    `https://nghiadang-single-spa.s3.ap-southeast-1.amazonaws.com/app1/nghiadang-app1.js`,
+    `https://nghiadang-single-spa.s3.ap-southeast-1.amazonaws.com/app2/nghiadang-app2.js`,
 ];
 
 const moduleNames = [
