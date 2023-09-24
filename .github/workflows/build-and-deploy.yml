@@ -31,7 +31,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: "cd app1"
-        name: "cd app1"
+        run: "cd app1"
       - name: Install Dependencies 🔰
         run: npm i
       - name: Run Build 🛠
@@ -55,7 +55,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: "cd app2"
-        name: "cd app2"
+        run: "cd app2"
       - name: Install Dependencies 🔰
         run: npm i
       - name: Run Build 🛠
