@@ -28,10 +28,11 @@ jobs:
 
   deploy-app1:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./app1
     steps:
       - uses: actions/checkout@master
-      - name: Setup Symfony
-        working-directory: ./app1
       - name: Install Dependencies 🔰
         run: npm i
       - name: Run Build 🛠
@@ -52,10 +53,11 @@ jobs:
 
   deploy-app2:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./app1
     steps:
       - uses: actions/checkout@master
-      - name: Setup Symfony
-        working-directory: ./app2
       - name: Install Dependencies 🔰
         run: npm i
       - name: Run Build 🛠
