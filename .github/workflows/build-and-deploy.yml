@@ -2,7 +2,7 @@ name: NAME_OF_YOUR_PROJECT
 on:
   push:
     branches:
-      - main #set the branch you want to auto-deploy from
+      - main
 jobs:
   deploy:
     runs-on: ubuntu-latest
