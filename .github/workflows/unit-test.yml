@@ -10,10 +10,12 @@ jobs:
       - uses: actions/checkout@master
       - name: Install Dependencies 🔰
         run: yarn
-      - name: Install Dependencies for app1
+      - name: Install Dependencies for app
         run: cd app1 && yarn
+      - name: cd to root
+        run: cd ../
       - name: Install Dependencies for app2
-        run: cd app1 && yarn
+        run: cd app2 && yarn
       - name: Run Build 🛠
         run: yarn build
       - name: Run unit test
