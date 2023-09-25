@@ -7,9 +7,9 @@ jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./app1
+    # defaults:
+    #   run:
+    #     working-directory: ./app1
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-node@v3
@@ -17,12 +17,18 @@ jobs:
         node-version: 18
     - name: Install dependencies
       run: yarn
+    - name: Start root mock server
+      run: yarn mock-server
+    - name: Install dependencies app1
+      run: cd app1 && yarn
+    - name: Start app1 mock server
+      run: cd app1 yarn mock-server
     - name: Install dependencies tests
-      run: cd tests && yarn
+      run: cd app1/tests && yarn
     - name: Install Playwright Browsers
       run: yarn playwright install --with-deps
     - name: Run Playwright tests
-      run: cd tests && yarn test
+      run: cd app1/tests && yarn test
     - uses: actions/upload-artifact@v3
       if: always()
       with:

@@ -12,7 +12,8 @@
     "test": "cross-env BABEL_ENV=test jest",
     "watch-tests": "cross-env BABEL_ENV=test jest --watch",
     "coverage": "cross-env BABEL_ENV=test jest --coverage",
-    "build:types": "tsc"
+    "build:types": "tsc",
+    "mock-server": "http-server dist --cors -p 8080"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
@@ -34,6 +35,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-config-ts-react-important-stuff": "^3.0.0",
     "eslint-plugin-prettier": "^3.4.1",
+    "http-server": "^14.1.1",
     "husky": "^7.0.2",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.0.6",
