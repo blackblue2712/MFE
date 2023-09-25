@@ -1,3 +1,3 @@
 export default function Root(props) {
-  return <section>{props.name} is mounted!</section>;
+  return <section data-testid="app1-title">{props.name} is mounted!</section>;
 }
