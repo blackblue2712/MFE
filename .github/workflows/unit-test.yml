@@ -12,6 +12,8 @@ jobs:
         run: yarn
       - name: Install Dependencies for app1
         run: cd app1 && yarn
+      - name: Install Dependencies for app2
+        run: cd app1 && yarn
       - name: Run Build 🛠
         run: yarn build
       - name: Run unit test
