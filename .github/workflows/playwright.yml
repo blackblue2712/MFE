@@ -22,7 +22,7 @@ jobs:
     - name: Install dependencies tests
       run: cd app1/tests && yarn
     - name: Install Playwright Browsers
-      run: yarn playwright install --with-deps
+      run: cd app1/tests && yarn playwright install --with-deps
     - name: Run Playwright tests
       run: yarn mock-server && cd app1 && yarn mock-server && sleep 10 && cd app1/tests && yarn test
     - uses: actions/upload-artifact@v3
