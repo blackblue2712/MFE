@@ -25,8 +25,8 @@ jobs:
       run: cd app1/tests && yarn playwright install --with-deps
     - name: Run Playwright tests
       run: | 
-        yarn mock-server &
-        cd app1 && yarn mock-server &
+        yarn start &
+        cd app1 && yarn start &
         sleep 10 
         cd app1/tests && yarn test
     - uses: actions/upload-artifact@v3
