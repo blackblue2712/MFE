@@ -28,9 +28,9 @@
 
 #   deploy-app1:
 #     runs-on: ubuntu-latest
-#     defaults:
-#       run:
-#         working-directory: ./app1
+    # defaults:
+    #   run:
+    #     working-directory: ./app1
 #     steps:
 #       - uses: actions/checkout@master
 #       - name: Install Dependencies 🔰

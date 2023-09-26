@@ -5,6 +5,7 @@
     "start": "webpack serve --port 9000 --env isLocal",
     "lint": "eslint src --ext js,ts,tsx",
     "test": "concurrently yarn:test:*",
+    "test-interaction": "cd app1/tests && yarn test",
     "test:app1": "cd app1 && yarn test",
     "test:app2": "cd app2 && yarn test",
     "format": "prettier --write .",
